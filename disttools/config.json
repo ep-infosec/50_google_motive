@@ -1,0 +1,46 @@
+{
+  "package": {
+    "name": "motive",
+    "url": "http://github.com/google/motive.git",
+    "branch": "develop",
+    "is_library": 1,
+    "third_party": 0,
+    "push": 1
+  },
+  "dependencies": [
+    { "name": "fplbase",
+      "url": "http://github.com/google/fplbase.git",
+      "branch": "develop",
+      "is_library": 1,
+      "third_party": 0,
+      "push": 0,
+      "fetch_dependencies": 1
+    },
+    {
+      "name": "fplutil",
+      "url": "http://github.com/google/fplutil.git",
+      "branch": "develop",
+      "is_library": 1,
+      "third_party": 0,
+      "push": 0,
+      "fetch_dependencies": 1
+    },
+    {
+      "name": "flatbuffers",
+      "url": "http://github.com/google/flatbuffers.git",
+      "branch": "master",
+      "is_library": 1,
+      "third_party": 0,
+      "push": 0
+    },
+    {
+      "name": "mathfu",
+      "url": "http://github.com/google/mathfu.git",
+      "branch": "develop",
+      "is_library": 1,
+      "third_party": 0,
+      "push": 0,
+      "fetch_dependencies": 1
+    }
+  ]
+}

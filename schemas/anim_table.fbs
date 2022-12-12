@@ -1,0 +1,33 @@
+// Copyright 2015 Google Inc. All rights reserved.
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+include "anim_list.fbs";
+
+namespace motive;
+
+// A list of lists of animations.
+// The outer list is indexed by `object`, the meaning of which is set by
+// the user, but is most likely an enum for the character being animated
+// (e.g. turtle, zombie, happy person, tall person, etc.).
+// The inner list is indexed by `anim_idx`, the meaning of which is also set
+// by the user, but is most likely an enum for the action being animated
+// (e.g. idle, walk forward, jump, etc.).
+table AnimTableFb {
+  // One list of animations per `object`.
+  lists:[AnimListFb];
+}
+
+root_type AnimTableFb;
+file_identifier "ATAB";
+file_extension "motivetab";
